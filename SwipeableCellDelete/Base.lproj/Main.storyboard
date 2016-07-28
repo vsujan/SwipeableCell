@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i2r-LC-Uhp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--MasterTVC-->
+        <scene sceneID="suQ-gM-Ltf">
+            <objects>
+                <tableViewController id="i2r-LC-Uhp" customClass="MasterTVC" customModule="SwipeableCellDelete" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nwj-G7-SQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwipeableCell" id="mEk-6B-NgB" customClass="SwipeableCell" customModule="SwipeableCellDelete" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mEk-6B-NgB" id="V4L-L5-O4P">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbh-17-M0c">
+                                            <rect key="frame" x="554" y="0.0" width="46" height="43.5"/>
+                                            <color key="backgroundColor" red="0.19215686269999999" green="0.49019607840000001" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Delete">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="button1Clicked:" destination="mEk-6B-NgB" eventType="touchUpInside" id="kiH-yD-48k"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-Uq-2Mm">
+                                            <rect key="frame" x="508" y="0.0" width="46" height="43.5"/>
+                                            <color key="backgroundColor" red="0.36078431370000003" green="0.76078431369999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="button2Clicked:" destination="mEk-6B-NgB" eventType="touchUpInside" id="MO7-jF-aPx"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-mV-DYd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2p-jT-h9E">
+                                                    <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="G2p-jT-h9E" firstAttribute="leading" secondItem="SaS-mV-DYd" secondAttribute="leading" constant="20" id="Ahk-5p-eiw"/>
+                                                <constraint firstItem="G2p-jT-h9E" firstAttribute="centerY" secondItem="SaS-mV-DYd" secondAttribute="centerY" id="y0x-r8-0pG"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SaS-mV-DYd" firstAttribute="leading" secondItem="V4L-L5-O4P" secondAttribute="leading" id="2O6-Me-Aii"/>
+                                        <constraint firstAttribute="bottom" secondItem="SaS-mV-DYd" secondAttribute="bottom" id="8KW-qU-2Wl"/>
+                                        <constraint firstAttribute="bottom" secondItem="rbh-17-M0c" secondAttribute="bottom" id="9tx-q9-DTM"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xcw-Uq-2Mm" secondAttribute="bottom" id="AXg-vj-z2I"/>
+                                        <constraint firstItem="SaS-mV-DYd" firstAttribute="top" secondItem="V4L-L5-O4P" secondAttribute="top" id="SYM-1t-P4i"/>
+                                        <constraint firstItem="Xcw-Uq-2Mm" firstAttribute="top" secondItem="V4L-L5-O4P" secondAttribute="top" id="cfU-3E-AgQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="rbh-17-M0c" secondAttribute="trailing" id="d73-xr-j8e"/>
+                                        <constraint firstAttribute="trailing" secondItem="SaS-mV-DYd" secondAttribute="trailing" id="gTn-ys-s4K"/>
+                                        <constraint firstItem="rbh-17-M0c" firstAttribute="leading" secondItem="Xcw-Uq-2Mm" secondAttribute="trailing" id="jZb-Ce-AXy"/>
+                                        <constraint firstItem="rbh-17-M0c" firstAttribute="top" secondItem="V4L-L5-O4P" secondAttribute="top" id="qW8-EU-oyQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="button1" destination="rbh-17-M0c" id="oV5-oS-pCF"/>
+                                    <outlet property="button2" destination="Xcw-Uq-2Mm" id="ZaR-1Y-C1L"/>
+                                    <outlet property="contentViewLeftConstraint" destination="2O6-Me-Aii" id="o66-bl-aDO"/>
+                                    <outlet property="contentViewRightConstraint" destination="gTn-ys-s4K" id="oeT-Mj-swt"/>
+                                    <outlet property="myContentView" destination="SaS-mV-DYd" id="qGM-86-lnB"/>
+                                    <outlet property="myTextLabel" destination="G2p-jT-h9E" id="6hp-JW-I9u"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i2r-LC-Uhp" id="jYF-aC-EGK"/>
+                            <outlet property="delegate" destination="i2r-LC-Uhp" id="cnj-pw-res"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHm-GQ-FgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="119"/>
+        </scene>
+    </scenes>
+</document>
